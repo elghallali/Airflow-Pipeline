@@ -144,7 +144,7 @@ with DAG(dag_id='yahoo_finance_etl',
     extract_data = PythonOperator(
         task_id='extract_stock_data',
         python_callable=conditional_data_extraction,
-        op_kwargs={'tickers': ['MSFT', 'AAPL', 'GOOG', 'NVDA', 'AMZN', 'META', 'NFLX', 'TSLA']},  # List of tickers
+        op_kwargs={'tickers': ['MSFT', 'AAPL', 'GOOG', 'NVDA', 'AMZN', 'META', 'NFLX', 'TSLA', 'ACN']},  # List of tickers
         dag=dag
     )
 
