@@ -104,7 +104,7 @@ def transform_data_task(**kwargs):
 # Define the DAG
 with DAG(dag_id='yahoo_finance_etl_daily_stocks_data_1',
          start_date=datetime(2024, 12, 10),
-         schedule_interval='* 23 * * 1-5',
+         schedule_interval='@daily',
          catchup=False) as dag:
 
     create_table_task = PostgresOperator(
