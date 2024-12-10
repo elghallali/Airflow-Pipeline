@@ -1,1 +1,15 @@
 yfinance
+pytest
+pytest-cov
+pylint
+fire
+black
+seaborn
+scikit-learn
+python-dotenv
+ipykernel
+xgboost-cpu
+plotly
+torch
+torchvision
+torchaudio

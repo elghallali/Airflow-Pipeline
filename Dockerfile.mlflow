@@ -1,0 +1,15 @@
+FROM python:3.9.21-slim
+
+# Set the working directory
+WORKDIR /mlflow
+
+# Install MLflow
+RUN pip install mlflow
+
+# Set up the SQLite database URI as an environment variable
+ENV BACKEND_URI sqlite:///mlflow.db
+
+# Expose the port the app runs on
+EXPOSE 5000
+
+CMD mlflow ui --backend-store-uri $BACKEND_URI --host 0.0.0.0
